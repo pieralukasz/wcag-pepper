@@ -6,7 +6,7 @@ import { Principle } from "../../../../types/Principle";
 import { Operable } from "../../../../types/Operable";
 
 export default {
-  title: `${Principle.OPERABLE}/${Operable.KEYBOARD}`,
+  title: `${Principle.OPERABLE}/${Operable.NAVIGABLE}`,
   component: FocusOrder,
 } as ComponentMeta<typeof FocusOrder>;
 
