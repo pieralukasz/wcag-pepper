@@ -14,6 +14,7 @@ import { Accessibility } from "@mui/icons-material";
 
 import { linkTo } from "@storybook/addon-links";
 import { Perceivable } from "../../types/Perceivable";
+import { PrincipleTitle } from "../../components/PrincipleTitle/PrincipleTitle";
 
 export const Introduction: React.VFC = () => {
   const title = `${Principle.PERCEIVABLE} | Introduction`;
@@ -32,23 +33,15 @@ export const Introduction: React.VFC = () => {
           można je było zamienić na inne formy (np. powiększony druk, brajl,
           mowa syntetyczna, symbole lub prostszy język)
         </Typography>
-        <Box sx={{ marginTop: 2 }}>
-          <Box sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-            <Typography id="alternativeTextHeadline" variant="h2">
-              Wytyczna 1.1 – Alternatywa tekstowa
-            </Typography>
-            <IconButton
-              component={Link}
-              role="link"
-              onClick={linkTo(
-                Principle.PERCEIVABLE,
-                Perceivable.ALTERNATIVE_TEXTS
-              )}
-              aria-label="Przejdź do przykładów alternatywy tekstowej"
-            >
-              <Accessibility />
-            </IconButton>
-          </Box>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <PrincipleTitle
+            title="Wytyczna 1.1 – Alternatywa tekstowa"
+            altLabel="Przejdź do przykładów alternatywy tekstowej"
+            onClick={linkTo(
+              Principle.PERCEIVABLE,
+              Perceivable.ALTERNATIVE_TEXTS
+            )}
+          />
           <Typography sx={{ marginTop: 1 }}>
             Podstawowe zasady pozwalające wypełnić to kryterium:
           </Typography>
@@ -97,6 +90,97 @@ export const Introduction: React.VFC = () => {
             szczegółowy, ilustracja może być linkiem do osobnej strony z opisem,
             lub opis może znaleźć się obok ilustracji.
           </Typography>
+        </Box>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <PrincipleTitle
+            title="Wytyczna 1.2 – Multimedia"
+            altLabel="Przejdź do przykładów multimediów"
+            onClick={linkTo(Principle.PERCEIVABLE, Perceivable.MULTIMEDIA)}
+          />
+          <Typography sx={{ marginTop: 1 }}>
+            Dostępność wcześniej nagranych plików audio i wideo
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Dla wszystkich nagrań nie będących na żywo należy udostępnić
+            transkrypcje lub (audiodeskrypcje dla wideo)
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Wykluczeniem są filmy służące jedynie dekoracji.
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Napisy w materiałach wideo powinny przekazywać informacje dźwiękowe
+            wpływające na zrozumienie kontekstu, czyli informacje wykraczające
+            poza dialogi. Celem uzyskania wyższego poziomu dostępności
+            materiałów wideo (AAA) materiał wideo powinien mieć dołączone
+            nagranie tłumaczenia w języku migowym.
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Dla materiałów na żywo powinny być dodane napisy.
+          </Typography>
+          <Link
+            sx={{ marginTop: 1 }}
+            href="https://scottvinkle.me/blogs/work/how-accessible-is-the-html-video-player"
+          >
+            HTML player
+          </Link>
+        </Box>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <PrincipleTitle
+            title="Wytyczna 1.3 – Możliwość adaptacji"
+            altLabel="Przejdź do przykładów możliwości adaptacji"
+            onClick={linkTo(Principle.PERCEIVABLE, Perceivable.ADAPTATION)}
+          />
+          <Typography sx={{ marginTop: 1 }}>
+            Dostępność wcześniej nagranych plików audio i wideo Dla wszystkich
+            nagrań nie będących na żywo należy udostępnić transkrypcje lub
+            (audiodeskrypcje dla wideo)
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Dokument HTML powinien być zbudowany z zachowaniem semantyki i
+            poszczególne elementy powinny być zbudowane z elementów o określonym
+            przeznaczeniu. Tabele powinny być używane do danych tabelarycznych,
+            a komórki danych są powiązane z ich nagłówkami. Podpisy tabeli
+            danych, jeśli występują, są powiązane z tabelami danych.
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Dokument powinien mieć zachowaną logiczną ciągłość przedstawienia
+            treści oraz umożliwiać nawigację po dokumencie w sposób logiczny i
+            intuicyjny.
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Instrukcje nie nie powinny opierać się wyłącznie na kształcie,
+            rozmiarze ani wizualnej lokalizacji (np. „Kliknij kwadratową ikonę,
+            aby kontynuować” lub „Instrukcje znajdują się w prawej kolumnie”).
+            Nie mogą również opierać się wyłącznie o dźwięk (przykładowo dźwięk
+            informujący o zakończeniu czasu przy wykonywaniu jakiegoś zadania
+            jako jedyny wyznacznik upływu czasu)
+          </Typography>
+          <Typography sx={{ marginTop: 1 }}>
+            Orientacja wyświetlanej zawartości nie powinna mieć wpływu na
+            funkcjonalność zawartości, pomocne w techniki:
+          </Typography>
+          <List>
+            <ListItem>
+              Użycie CSS orientation z wartością “landscape/portrait”.
+            </ListItem>
+            <ListItem>
+              Użycie show/hide by móc ukryć poszczególne elementy w odpowiedniej
+              orientacji.
+            </ListItem>
+          </List>
+          <Typography sx={{ marginTop: 1 }}>
+            Bardzo ważną kwestią w przypadku myśleniu o orientacji jest
+            uświadomienie sobie, że osoby które mają przymocowany tablet do
+            wózka, nie są w stanie go obrócić. W związku z defektem kryterium
+            1.3.4 Orientacja (AA) nie możemy ani zablkokować tej możliwości ani
+            wyświetlić komunikatu o tym żeby zmienił urządzenie XDE
+          </Typography>
+          <blockquote>
+            <strong>
+              “I can't rotate my tablet — it's attached to my wheelchair.” -
+              Comic with cerebral palsy who uses a wheelchair
+            </strong>
+          </blockquote>
         </Box>
       </Container>
     </>

@@ -8,7 +8,7 @@ export const Decoration: React.VFC = () => {
     <CenterExample title="Decoration">
       <img
         src="https://bouncymustard.com/wp-content/uploads/2021/06/1-Funny-Dogs-Wearing-Wigs.jpg"
-        alt="Only decoration XD"
+        alt=""
       />
     </CenterExample>
   );

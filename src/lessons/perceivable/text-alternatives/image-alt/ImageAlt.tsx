@@ -8,7 +8,7 @@ export const ImageAlt: React.VFC = () => {
     <CenterExample title="Image alt">
       <img
         src="https://avatarfiles.alphacoders.com/105/thumb-1920-105223.jpg"
-        // alt="Link z Zeldy"
+        // alt="Link z Zelda"
         // aria-describedby="p1"
       />
       {/*<p id="p1">*/}
