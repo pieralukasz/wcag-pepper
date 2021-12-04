@@ -1,18 +1,18 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { FocusBypass } from "./FocusBypass";
+import { FocusVisible } from "./FocusVisible";
 import { Principle } from "../../../../types/Principle";
 import { Operable } from "../../../../types/Operable";
 
 export default {
   title: `${Principle.OPERABLE}/${Operable.NAVIGABLE}`,
-  component: FocusBypass,
-} as ComponentMeta<typeof FocusBypass>;
+  component: FocusVisible,
+} as ComponentMeta<typeof FocusVisible>;
 
-const Template: ComponentStory<typeof FocusBypass> = (args) => (
-  <FocusBypass {...args} />
+const Template: ComponentStory<typeof FocusVisible> = (args) => (
+  <FocusVisible {...args} />
 );
 
-export const focusBypassBlock = Template.bind({});
-focusBypassBlock.args = {};
+export const focusVisible = Template.bind({});
+focusVisible.args = {};

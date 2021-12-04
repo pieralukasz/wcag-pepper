@@ -1,16 +1,50 @@
 import React from "react";
-import { ExampleAppBar } from "../../../../components/ExampleAppBar/ExampleAppBar";
-import { Box, Button, Typography } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Breadcrumbs as MuiBreadcrumbs,
+  Link,
+} from "@mui/material";
+import { Helmet } from "react-helmet";
 import { CenterExample } from "../../../../components/CenterExample/CenterExample";
 import { BypassBlock } from "../../../../components/BypassBlock/BypassBlock";
+import { ExampleAppBar } from "../../../../components/ExampleAppBar/ExampleAppBar";
+import { VisuallyHidden } from "../../../../components/VisuallyHidden/VisuallyHidden";
 
-export const FocusBypass: React.FC = () => {
+export const Breadcrumbs: React.FC = () => {
   return (
     <Box>
-      <BypassBlock id={"#main-content"} />
       <ExampleAppBar />
+      <MuiBreadcrumbs
+        sx={{ marginTop: 2, marginLeft: 4 }}
+        separator="›"
+        aria-label="breadcrumb"
+      >
+        <Link underline="hover" color="inherit" href="/">
+          Boring
+        </Link>
+        <Link
+          underline="hover"
+          color="inherit"
+          href={"/getting-started/installation/"}
+        >
+          <VisuallyHidden>Przejdź do głównej strony</VisuallyHidden>
+          Core
+        </Link>
+        <Link
+          underline="hover"
+          color="text.primary"
+          href={"/products"}
+          aria-current="page"
+        >
+          Products
+          <VisuallyHidden>
+            Na tej stronie aktualnie się znajdujesz
+          </VisuallyHidden>
+        </Link>
+      </MuiBreadcrumbs>
       <Box role="main" id="main-content">
-        <CenterExample title={"Focus Bypass Block"}>
+        <CenterExample title={"Breadcrumbs"}>
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
             adipisci amet commodi cupiditate deserunt ducimus magni maxime natus

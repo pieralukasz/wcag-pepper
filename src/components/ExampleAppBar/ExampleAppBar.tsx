@@ -8,9 +8,10 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { List, ListItem } from "@mui/material";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -95,16 +96,51 @@ export const ExampleAppBar: React.FC = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
+          <Box
+            sx={{
+              flexGrow: 1,
+            }}
+            component="nav"
+          >
+            <List sx={{ display: { xs: "none", md: "flex" }, width: "400px" }}>
+              <ListItem>
+                <Link
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    color: "white",
+                    display: "inline-block",
+                  }}
+                  href={`/products`}
+                  aria-current="page"
+                >
+                  Products
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    color: "white",
+                    display: "inline-block",
+                  }}
+                  href={`/pricing`}
+                >
+                  Pricing
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    color: "white",
+                    display: "inline-block",
+                  }}
+                  href={`/blog`}
+                >
+                  Blog
+                </Link>
+              </ListItem>
+            </List>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

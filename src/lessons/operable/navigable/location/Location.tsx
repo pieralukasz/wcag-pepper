@@ -1,16 +1,20 @@
 import React from "react";
-import { ExampleAppBar } from "../../../../components/ExampleAppBar/ExampleAppBar";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import { CenterExample } from "../../../../components/CenterExample/CenterExample";
-import { BypassBlock } from "../../../../components/BypassBlock/BypassBlock";
+import { ExampleAppBar } from "../../../../components/ExampleAppBar/ExampleAppBar";
 
-export const FocusBypass: React.FC = () => {
+const CurrentBox = styled(Box)`
+  a[aria-current] {
+    color: black;
+  }
+`;
+
+export const Location: React.FC = () => {
   return (
-    <Box>
-      <BypassBlock id={"#main-content"} />
+    <CurrentBox>
       <ExampleAppBar />
       <Box role="main" id="main-content">
-        <CenterExample title={"Focus Bypass Block"}>
+        <CenterExample title={"Focus Order"}>
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
             adipisci amet commodi cupiditate deserunt ducimus magni maxime natus
@@ -27,6 +31,6 @@ export const FocusBypass: React.FC = () => {
           </Typography>
         </CenterExample>
       </Box>
-    </Box>
+    </CurrentBox>
   );
 };
