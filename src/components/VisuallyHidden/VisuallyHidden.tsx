@@ -11,8 +11,17 @@ const Hidden = styled("span")`
   width: 1px;
 `;
 
-export const VisuallyHidden: React.FC = (props) => {
-  const { children } = props;
+interface Props {
+  id?: string;
+  role?: string;
+}
 
-  return <Hidden>{children}</Hidden>;
+export const VisuallyHidden: React.FC<Props> = (props) => {
+  const { children, id, role } = props;
+
+  return (
+    <Hidden id={id} role={role}>
+      {children}
+    </Hidden>
+  );
 };
