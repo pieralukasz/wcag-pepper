@@ -16,6 +16,10 @@ import { linkTo } from "@storybook/addon-links";
 import { Principle } from "../../types/Principle";
 import { Perceivable } from "../../types/Perceivable";
 import { VisuallyHidden } from "../../components/VisuallyHidden/VisuallyHidden";
+import { Paragraph } from "../../components/Paragraph/Paragraph";
+import { Main } from "../../components/Main/Main";
+import { Article } from "../../components/Article/Article";
+import { SecondTitle } from "../../components/SecondTitle/SecondTitle";
 
 export const Introduction: React.VFC = () => {
   const validators = [
@@ -47,30 +51,26 @@ export const Introduction: React.VFC = () => {
         <title>Validators</title>
       </Helmet>
       <BypassBlock id="#main-headline" />
-      <Container sx={{ marginTop: 2 }}>
-        <Headline id="main-headline" title="Walidatory" />
-        <Typography sx={{ marginTop: 1 }}>
-          Po co właściwie nam są walidatory? No a po to żebyśmy sprawdzili w
-          jaki sposób nasza strona internetowa jest zgodna z WCAG 2.0 lub WCAG
-          2.1 w konkretnych poziomach tj. A, AA, AAA. Staramy się zazwyczaj żeby
-          nasza strona była zgodna z WCAG 2.1 oraz poziomem AA. Osiągnięcie
-          poziomu AAA bywa czasem bardzo trudne. Większość stron niestety nawet
-          nie oferuje minimalnego poziomu A.
-        </Typography>
-        <Typography sx={{ marginTop: 1 }}>
-          Więc co daje nam walidator? No sprawdzi nam stronkę ale tylko w około
-          w 20% resztą musi się zając człowiek z użyciem czytnika ekranu.
-        </Typography>
-        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
-          <PrincipleTitle
-            title="Darmowe walidatory kodu HTML"
-            altLabel=""
-            withButton={false}
-            onClick={() => {}}
-          />
-          <Typography id="validatorsExample" sx={{ marginTop: 1 }}>
+      <Main>
+        <Article>
+          <Headline id="main-headline" title="Walidatory" />
+          <Paragraph>
+            Po co właściwie nam są walidatory? No a po to żebyśmy sprawdzili w
+            jaki sposób nasza strona internetowa jest zgodna z WCAG 2.0 lub WCAG
+            2.1 w konkretnych poziomach tj. A, AA, AAA. Staramy się zazwyczaj
+            żeby nasza strona była zgodna z WCAG 2.1 oraz poziomem AA.
+            Osiągnięcie poziomu AAA bywa czasem bardzo trudne. Większość stron
+            niestety nawet nie oferuje minimalnego poziomu A.
+          </Paragraph>
+          <Paragraph>
+            Więc co daje nam walidator? No sprawdzi nam stronkę ale tylko w
+            około w 20% resztą musi się zając człowiek z użyciem czytnika
+            ekranu.
+          </Paragraph>
+          <SecondTitle>Darmowe walidatory kodu HTML</SecondTitle>
+          <Paragraph id="validatorsExample">
             Przykłady darmowych walidatorów kodu:
-          </Typography>
+          </Paragraph>
           <List aria-labelledby="validatorsExample">
             {validators.map(({ name, href }) => (
               <ListItem key={name}>
@@ -85,16 +85,14 @@ export const Introduction: React.VFC = () => {
               </ListItem>
             ))}
           </List>
-          <Typography>
-            <Link
-              href="https://yvettesbridalformal.p1r8.net/"
-              aria-label="Przejdź na zajebistą stronę"
-            >
-              Zajebista strona
-            </Link>
-          </Typography>
-        </Box>
-      </Container>
+          <Link
+            href="https://yvettesbridalformal.p1r8.net/"
+            aria-label="Przejdź na zajebistą stronę"
+          >
+            Zajebista strona
+          </Link>
+        </Article>
+      </Main>
     </>
   );
 };

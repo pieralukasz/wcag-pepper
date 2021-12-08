@@ -17,7 +17,14 @@ export const PrincipleTitle: React.VFC<Props> = (props) => {
   const { title, altLabel, withButton = true, onClick } = props;
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        marginTop: 3,
+      }}
+    >
       <Typography id="alternativeTextHeadline" variant="h2">
         {title}
       </Typography>

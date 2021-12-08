@@ -10,6 +10,9 @@ const withThemeProvider = (Story, context) => {
       h2: {
         fontSize: "2em",
       },
+      h3: {
+        fontSize: "1.6em",
+      },
     },
   });
 

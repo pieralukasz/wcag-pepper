@@ -8,6 +8,9 @@ import { PrincipleTitle } from "../../components/PrincipleTitle/PrincipleTitle";
 import { Headline } from "../../components/Headline/Headline";
 import { BypassBlock } from "../../components/BypassBlock/BypassBlock";
 import { Operable } from "../../types/Operable";
+import { Main } from "../../components/Main/Main";
+import { Article } from "../../components/Article/Article";
+import { Paragraph } from "../../components/Paragraph/Paragraph";
 
 export const Introduction: React.VFC = () => {
   const title = `${Principle.OPERABLE} | Introduction`;
@@ -18,21 +21,21 @@ export const Introduction: React.VFC = () => {
         <title>{title}</title>
       </Helmet>
       <BypassBlock id="#main-headline" />
-      <Container sx={{ marginTop: 2 }}>
-        <Headline id="main-headline" title="Zasada 2 – Funkcjonalność" />
-        <Typography sx={{ marginTop: 1 }}>
-          Komponenty interfejsu użytkownika oraz nawigacja muszą być
-          funkcjonalne (powinny pozwalać na interakcję).
-        </Typography>
-        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+      <Main>
+        <Article>
+          <Headline id="main-headline" title="Zasada 2 – Funkcjonalność" />
+          <Paragraph>
+            Komponenty interfejsu użytkownika oraz nawigacja muszą być
+            funkcjonalne (powinny pozwalać na interakcję).
+          </Paragraph>
           <PrincipleTitle
             title="Wytyczna 2.1 – Dostępność z klawiatury"
             altLabel="Przejdź do przykładów obsługi klawiatury"
             onClick={linkTo(Principle.OPERABLE, Operable.KEYBOARD)}
           />
-          <Typography id="keyboardTitle" sx={{ marginTop: 1 }}>
+          <Paragraph id="keyboardTitle">
             Klawiatura - możliwość obsługi strony tylko za pomocą klawiatury.
-          </Typography>
+          </Paragraph>
           <List aria-labelledby="keyboardTitle">
             <ListItem>
               Używaj przycisków `[tab]`, `[spacja]`, `[enter]`,` [esc]`,
@@ -45,13 +48,13 @@ export const Introduction: React.VFC = () => {
               wizualną kolejnością elementów na stronie.
             </ListItem>
           </List>
-          <Typography sx={{ marginTop: 1 }}>
+          <Paragraph>
             Powinniśmy używać atrybutu tab-index do manualnego poruszania się po
             naszej stronie za pomocą klawiatury.
-          </Typography>
-          <Typography id="tabIndexHeader" sx={{ marginTop: 1 }}>
+          </Paragraph>
+          <Paragraph id="tabIndexHeader">
             Wartości jakie może przyjmować tab-index:
-          </Typography>
+          </Paragraph>
           <List aria-labelledby="tabIndexHeader">
             <ListItem>
               {"x < 0"} - Element będzie łapał focusa tylko z poziomu metod (lub
@@ -66,51 +69,45 @@ export const Introduction: React.VFC = () => {
               dzięki niemu wyznaczać kolejność focusowanych elementów
             </ListItem>
           </List>
-          <Typography sx={{ marginTop: 1 }}>
+          <Paragraph>
             Musimy wiedzieć, że jesteśmy w stanie przejść przez wszystkie
             istotne elementy na naszej stronie za pomocą klawiatury. Dla
             sprawdzenia najlepiej odłączyć myszkę i niech nie kusi.
-          </Typography>
-        </Box>
-        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          </Paragraph>
           <PrincipleTitle
             title="Wytyczna 2.2 – Wystarczająca ilość czasu"
             withButton={false}
             altLabel="Przejdź do przykładów nawigowalności!"
             onClick={linkTo(Principle.OPERABLE, Operable.ENOUGH_TIME)}
           />
-          <Typography sx={{ marginTop: 1 }}>
+          <Paragraph>
             Dajmy czas użytkownikowi na wykonanie akcji i przeczytanie
             zawartości, stopujmy animacje i w sumie tyle z najważniejszych
             rzeczy. Ma jakieś wyjątki ale nuda ogromna.
-          </Typography>
-        </Box>
-        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          </Paragraph>
           <PrincipleTitle
             title="Wytyczna 2.3 – Ataki padaczk"
             altLabel="Przejdź do przykładów ataków padaczki!"
             onClick={linkTo(Principle.OPERABLE, Operable.SEIZURES_AND_PHYSICAL)}
           />
-          <Typography sx={{ marginTop: 1 }}>
+          <Paragraph>
             Dosyć prosta sprawa. Nie napierdzielajmy wszędzie animacjami,
             zwłaszcza takimi gdzie pojawia się dużo błysków. Na przykładzie się
             bardziej wyklaruje XDe.
-          </Typography>
-        </Box>
-        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          </Paragraph>
           <PrincipleTitle
             title="Wytyczna 2.4 – Nawigowalność"
             altLabel="Przejdź do przykładów nawigowalności!"
             onClick={linkTo(Principle.OPERABLE, Operable.NAVIGABLE)}
           />
-          <Typography sx={{ marginTop: 1 }}>
+          <Paragraph>
             Odpowiednie tytułowanie stron/podstron. Pamiętajmy, że odpowiednie
             tytułowanie stron jest dobre dla czytników ekranowych oraz również
             dla SEO.
-          </Typography>
-          <Typography sx={{ marginTop: 1 }} id="headlinesAndLabel">
+          </Paragraph>
+          <Paragraph id="headlinesAndLabel">
             Nagłówki i labele powinny być odpowiednio opisywane. Tzn:
-          </Typography>
+          </Paragraph>
           <List aria-labelledby="headlinesAndLabel">
             <ListItem>
               Tylko jeden nagłówek główny {"<h1></h1>"} dla strony internetowej
@@ -123,35 +120,35 @@ export const Introduction: React.VFC = () => {
               kolei. Pamiętajmy też o sensownej treści dla nagłówków.
             </ListItem>
           </List>
-          <Typography sx={{ marginTop: 1 }}>
+          <Paragraph>
             Zapewnienie opisowych labeli jest bardzo ważne. Należy pamiętać, że
             pole {"<label>"} musi być zrozumiałe dla użytkownika. Opisanie /
             przedstawienie w polu label, że pole jest wymagane.
-          </Typography>
-          <Typography sx={{ marginTop: 1 }}>
+          </Paragraph>
+          <Paragraph>
             Klasę css visuallyhidden można wykorzystywać do przedstawiania
             niewidocznego tekstu (który powinien być widoczny dla czytników
             ekranowych). Przydatne np. przy przyciskach z ikonami, które nie
             posiadają tekstu.
-          </Typography>
-          <Typography sx={{ marginTop: 1 }}>
+          </Paragraph>
+          <Paragraph>
             Dobrą praktyką jest umieszczanie pola label nad polem input. Jest to
             przydatne gdy np. potrzebujemy powiększyć ekran (200%), wtedy na
             przybliżeniu mamy cały input wraz z tekstem.
-          </Typography>
-          <Typography sx={{ marginTop: 1 }}>
+          </Paragraph>
+          <Paragraph>
             Mniej powszechna rozbieżność między etykietami a danymi wejściowymi
             może wystąpić, gdy grupa przycisków opcji jest skonfigurowana w celu
             uzyskania wyboru w całym zakresie. Etykiety mogą znajdować się tylko
             na każdym końcu zakresu lub mogą być przeplatane w różnych punktach
             zakresu.
-          </Typography>
-          <Typography sx={{ marginTop: 1 }}>
+          </Paragraph>
+          <Paragraph>
             Ważnym elementem jest również pokazywanie w jaki sposób działa focus
             i gdzie się aktualnie znajduje.
-          </Typography>
-        </Box>
-      </Container>
+          </Paragraph>
+        </Article>
+      </Main>
     </>
   );
 };
