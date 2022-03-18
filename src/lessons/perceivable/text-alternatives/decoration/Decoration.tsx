@@ -9,6 +9,7 @@ export const Decoration: React.VFC = () => {
       <img
         src="https://bouncymustard.com/wp-content/uploads/2021/06/1-Funny-Dogs-Wearing-Wigs.jpg"
         alt=""
+        // aria-hidden={true}
       />
     </CenterExample>
   );

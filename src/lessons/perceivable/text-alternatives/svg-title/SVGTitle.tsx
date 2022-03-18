@@ -6,14 +6,14 @@ export const SVGTitle: React.VFC = () => {
   return (
     <CenterExample title="SVG Title">
       <svg
-        // role="img"
+        role="img"
         width="120"
         height="120"
         viewBox="0 0 15 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/*<title>Obrazek przedstawia niebieskie oko</title>*/}
+        <title>Obrazek przedstawia niebieskie oko</title>
         <path
           d="M14 7.5C14 8.62368 13.381 9.72536 12.2119 10.5827C11.0435 11.4396 9.3808 12 7.5 12C5.6192 12 3.95654 11.4396 2.78806 10.5827C1.61899 9.72536 1 8.62368 1 7.5C1 6.37632 1.61899 5.27464 2.78806 4.41732C3.95654 3.56043 5.6192 3 7.5 3C9.3808 3 11.0435 3.56043 12.2119 4.41732C13.381 5.27464 14 6.37632 14 7.5Z"
           fill="white"

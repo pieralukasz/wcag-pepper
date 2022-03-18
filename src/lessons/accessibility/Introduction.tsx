@@ -37,20 +37,7 @@ export const Introduction: React.VFC = () => {
             src="https://images.samsung.com/is/image/samsung/assets/latin_en/p6_gro2/accessibility/overview/accessibility_overview_meaningful-innovation_pc.jpg?$FB_TYPE_A_JPG$"
             alt="Ten tekst powinien być duży i opisać wszystko co znajduje się na obrazku"
           />
-          <Paragraph>
-            a11y Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Delectus deserunt dicta nemo perferendis quaerat. Aut, quam
-            voluptatum? A architecto distinctio eius, esse expedita facere
-            molestias possimus voluptate. Adipisci alias autem consequatur
-            distinctio ducimus eius ex expedita facere id minima nisi, officia
-            officiis quaerat quod soluta. Beatae culpa error facere libero quae,
-            recusandae ut vitae! Facere illo in sed? Ad aspernatur at aut
-            dolores doloribus eaque eius eum expedita fugit hic impedit,
-            inventore ipsam libero minima molestias, nemo placeat quod
-            reiciendis, saepe veritatis vitae voluptas voluptatibus? Animi at
-            consequuntur est eveniet harum neque nobis officiis optio quasi qui.
-            Excepturi, minima, veniam.
-          </Paragraph>
+          <Paragraph>Dużo by mówić...</Paragraph>
           <SecondTitle>Semantyczny HTML</SecondTitle>
           <Paragraph>
             Semantyczny HTML pozwala nam okiełznać całą stronę.{" "}
@@ -61,7 +48,35 @@ export const Introduction: React.VFC = () => {
               Fajna tabelka
             </Link>
           </Paragraph>
-
+          <SecondTitle>Drzewko dostępności</SecondTitle>
+          <Paragraph>
+            Jest to inaczej model dostępności obiektu (AOM), który zawiera
+            wszystkie informacje z dostępnością dla większości elementów HTML.
+          </Paragraph>
+          <img
+            style={{ marginTop: 8 }}
+            src="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/imgs/acctree1.jpg?hl=pl"
+            alt="Drzewko dostępności z DOM"
+          />
+          <SecondTitle id="semanticHTML">
+            Elementy semantycznego HTML'a
+          </SecondTitle>
+          <Paragraph>Rozróżniamy kilka wartości semantycznego HTML'a</Paragraph>
+          <List aria-labelledby="semanticHTML">
+            <ListItem>
+              <span lang="en">Role</span> - Jaką role odgrywa dany element
+            </ListItem>
+            <ListItem>
+              <span lang="en">Title/ Name/ Placeholder/ Label/ Alt</span> -
+              Część opisująca
+            </ListItem>
+            <ListItem>
+              <span lang="en">State</span> - Stan elementu
+            </ListItem>
+            <ListItem>
+              <span lang="en">Value</span> - Jaką wartość ma element
+            </ListItem>
+          </List>
           <SecondTitle>Landmarks</SecondTitle>
           <Paragraph>
             Czym są landmarki i jak osoby z niepełnosprawnościami z nich
@@ -85,25 +100,6 @@ export const Introduction: React.VFC = () => {
             </ListItem>
             <ListItem>
               <pre>{`<footer />`}*</pre>
-            </ListItem>
-          </List>
-          <SecondTitle id="semanticHTML">
-            Elementy semantycznego HTML'a?
-          </SecondTitle>
-          <Paragraph>Rozróżniamy kilka wartości semantycznego HTML'a</Paragraph>
-          <List aria-labelledby="semanticHTML">
-            <ListItem>
-              <span lang="en">Role</span> - Jaką role odgrywa dany element
-            </ListItem>
-            <ListItem>
-              <span lang="en">Title/ Name/ Placeholder/ Label/ Alt</span> -
-              Część opisująca
-            </ListItem>
-            <ListItem>
-              <span lang="en">State</span> - Stan elementu
-            </ListItem>
-            <ListItem>
-              <span lang="en">Value</span> - Jaką wartość ma element
             </ListItem>
           </List>
 
