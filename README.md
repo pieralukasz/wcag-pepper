@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# WCAG Accessibility Presentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a presentation and examples for Web Content Accessibility Guidelines (WCAG) and other accessibility (a11y) best practices. The goal is to educate developers on how to create accessible web applications.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+The project is organized as follows:
 
-### `yarn start`
+- `public/`: Contains static assets and the main HTML file.
+- `src/`: Contains the source code for the React application.
+  - `components/`: Reusable React components.
+  - `lessons/`: Contains the presentation and examples for different accessibility topics.
+  - `types/`: TypeScript type definitions.
+  - `App.tsx`: The main application component.
+  - `index.tsx`: The entry point for the React application.
+  - `reportWebVitals.ts`: Performance measurement setup.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Accessibility Topics Covered
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Introduction to Accessibility**: Basic concepts and importance of accessibility.
+- **Perceivable**: Ensuring content is perceivable by all users.
+  - Examples: Color contrast, text resizing, multimedia alternatives.
+- **Operable**: Ensuring user interface components are operable.
+  - Examples: Keyboard navigation, focus management.
+- **Understandable**: Ensuring content is understandable.
+  - Examples: Clear instructions, readable text.
+- **Robust**: Ensuring content is robust and works with various assistive technologies.
+  - Examples: Semantic HTML, ARIA roles.
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+For more information on WCAG and accessibility, visit the [W3C Web Accessibility Initiative](https://www.w3.org/WAI/).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
